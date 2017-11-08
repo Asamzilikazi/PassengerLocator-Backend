@@ -1,0 +1,70 @@
+<form name="regform" action="javascript:register()">
+<table id="register">
+	<tr>
+		<td align="right" valign="top" style="padding-top: 5px">Name*</td>
+		<td>
+		<table>
+			<tr>
+				<td><input type="text" name="fname" /></td>
+				<td><input name="mname" type="text" /></td>
+				<td><input name="lname" type="text" /></td>
+			</tr>
+			<tr>
+				<td align="center">(First name)*</td>
+				<td align="center">(Middle name)</td>
+				<td align="center">(Last name)*</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">User Name*</td>
+		<td><input name="uname" type="text"	onkeyup="javascript:checkname()" />
+			<input type="button" style="width:120px;" 
+				 value="Check Availability" onclick="isAvailName()"/>
+			<label id="m_uname"></label></td>
+	</tr>
+	<tr>
+		<td align="right">Password*</td>
+		<td><input name="passw" type="password"
+			onkeyup="javascript:checkpassw()" /><label id="m_passw"></label></td>
+	</tr>
+	<tr>
+		<td align="right">Retype Password*</td>
+		<td><input name="passw2" type="password" /></td>
+	</tr>
+	<tr>
+		<td align="right">Email-Id*</td>
+		<td><input name="email" type="text"	onkeyup="javascript:checkemail()" />
+		<label id="m_email"></label></td>
+	</tr>
+	<tr>
+		<td align="right">Phone No.</td>
+		<td><input name="phno" type="text"
+			onkeyup="javascript:checkphno()"/><label id="m_phno"></label></td>
+	</tr>
+	<tr>
+		<td align="right">Address*</td>
+		<td><textarea name="address"></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">City</td>
+		<td id="citycombo"></td>
+	</tr>
+	<tr>
+		<td align="right">Credit Card No.*</td>
+		<td><input name="crno" type="text"
+			onkeyup="javascript:checkcrno()" /><label id="m_crno"></label></td>
+	</tr>
+</table>
+<div style="color: red">fields marked with * are required</div>
+<div><input name="terms" type="radio" onclick="agree=true" style="width:20px;"/>
+	I agree to the terms of &nbsp;	<a href="#privacy" target="_blank">Privacy Policy</a><br />
+	<input name="terms" type="radio" onclick="agree=false" checked style="width:20px;"/> I don't agree</div>
+<table>
+	<tr align="center">
+		<td width="105"><input type="submit" class="customButton" value="Register"></td>
+		<td width="169"><input type="reset" class="customButton" value="Cancel"></td>
+	</tr>
+</table>
+</form>

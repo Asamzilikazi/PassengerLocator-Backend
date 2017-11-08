@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Dream World Cinemas only for admin</title>
+<link href="themes/default/dream.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="validate.js"></script>
+<script type="text/JavaScript" src="ajax.js"></script>
+<script type="text/JavaScript" src="navigation.js"></script>
+<script type="text/JavaScript" src="process.js"></script>
+<script type="text/JavaScript" src="swfobject.js"></script>
+<script type="text/javascript" src="admin.js" ></script>
+<script type="text/javascript">
+	function displayError(errMessage,errUrl,lineno){
+		var msg="Message:"+errMessage+"\n";
+		msg+="Document:"+errUrl+"\n";
+		msg+="Line no:";+lineno+"\n"
+		alert(msg);		
+	}
+	window.onerror=displayError;
+</script>
+</head>
+<body>
+<script>setInterval('autorefreshmsg()',10000);setInterval('showTime()',1000)</script>
+<img src="media/icon.png" alt="Dream World Cinemas" border="0" style="position:absolute; left: 35%;top:0px; "/>
+<table width="100%">
+	<tr>
+		<td><img src="media/header.jpg" width="100%" height="100"></td>
+	</tr>
+	<tr><td id="messagebar">
+		<table width=100%><tr>
+		<td width="200px" align="left" id="messageleft"></td>
+		<td width="250px"  align="center" id="messagecenter"></td>
+		<td id="messageright" align="left" ></td>
+		</tr></table>
+	</td></tr>
+	<tr><td>
+		<table><tr><td  valign="top">
+			<table id="navigation"  width="170px">
+				<tr><td><a href="#login">Log in</a></td></tr>
+				<tr><td><a href="javascript:viewCustomer()">Customers</a></td></tr>
+				<tr><td><a href="javascript:viewCinema()">Cinemas</a></td></tr>
+				<tr><td><a href="javascript:viewMovie()">Movies</a></td></tr>
+				<tr><td><a href="javascript:viewSchedule()">Schedule</a></td></tr>
+				<tr><td><a href="javascript:viewTimeslot()">Time Slot</a></td></tr>
+				<tr><td><a href="javascript:viewTicket()">Ticket</a></td></tr>
+				<tr><td><a href="javascript:logout()">Log Out</a></td></tr>
+			</table>
+		</td>
+		<td width=20px></td>
+		<td id="databar">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="608" height="450">
+			<param name="movie" value="media/dreamworld.swf">
+			<param name="quality" value="low">
+			<embed src="media/dreamworld.swf" width="608" height="450" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" />
+			</object>
+		</td></tr>
+	</table></td></tr>
+</table>
+<table id="footer" width="100%" >
+<tr>
+	<td>
+		<a href="#">Home</a> &nbsp;|
+		<a href="#schedule">Schedule</a> &nbsp;|
+		<a href="#privacy">Privacy Policy</a>&nbsp;|
+		<a href="#contactus">Contact us</a> &nbsp;|
+		<a href="#disclaimer">Disclaimer</a> &nbsp;|
+		<a href="#aboutus">About us</a>&nbsp;
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>test</title>
+<script>
+var alpha=" ABCDE";
+function clicked(obj){
+	if (obj.style.background=='red')
+		obj.style.background="white";
+	else
+		obj.style.background="red";	
+}
+</script>
+</head>
+<body bgcolor="black">
+
+<table>
+<script>
+for(i=0;i<=5;i++){
+	document.write("<tr>");
+	for(j=0;j<=20;j++){
+		if(i==0){
+			if(j==0)	document.write("<td>&nbsp;</td>");
+			else		document.write("<td>"+j+"</td>");
+		}else{
+			if(j==0){
+				document.write("<td>"+alpha.charAt(i)+"</td>");
+			}else{
+				document.write("<td id=" +((i-1)*20+j)+" width='15px' onclick='clicked(this)'></td>");
+			}
+		}
+	}
+	document.write("</tr>");
+}
+</script>
+</table>
+<!--<td style="margin:auto"-->
+</body>
